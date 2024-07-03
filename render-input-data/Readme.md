@@ -1,4 +1,4 @@
-Folder-/
-   -images.txt/
-   -cameras.txt/
+Folder-
+   -images.txt
+   -cameras.txt
    -point_cloud.ply
