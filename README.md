@@ -1,10 +1,13 @@
 # Novel camera view rendering of trained Gaussian Splatting model to PNG images
 
 By Pranav Chougule, Arizona State University
+## Overview
+Gaussian Splatting is a technique for rendering novel views of a scene using a point cloud representation. This repository includes scripts and sample data to demonstrate how to render images from different viewpoints using a trained Gaussian splatting model.
+## Google Colab Notebook
+To get started quickly, follow [here](https://colab.research.google.com/drive/11jayCPkY7Nr9OV9bxzzN3SHjMzb2poS6?usp=sharing/) for step-by-step instructions on rendering novel views using a pretrained model.
 
-Follow Google Colab Notebook to render novel views pretrained model
-
-https://colab.research.google.com/drive/11jayCPkY7Nr9OV9bxzzN3SHjMzb2poS6?usp=sharing
+## Directory Structure for sample data
+Ensure your directory structure is as follows:
 
 directory ```render-input-data\sample-folder```:
 ```
@@ -15,6 +18,9 @@ directory ```render-input-data\sample-folder```:
 ```
 
 ```shell
+## Running the Script
+To render novel views, run the render_nv.py script:
+
 python render_nv.py --model_path <path to point-cloud.ply (pre-trained model)> --source_path <path to images.txt and cameras.txt>
 ```
 ## Instructions for Creating and Formatting images.txt and cameras.txt
