@@ -16,10 +16,16 @@ directory ```render-input-data\sample-folder```:
 |---cameras.txt
 |---point-cloud.ply
 ```
-
-```shell
 ## Running the Script
 To render novel views, run the render_nv.py script:
+ 
+```shell
+
+!python render_nv.py --model_path /content/drive/MyDrive/Gaussian-Splatting-render/gaussian-splatting-novel-view-render/render-input-data/sample-folder/ --source_path /content/drive/MyDrive/Gaussian-Splatting-render/gaussian-splatting-novel-view-render/render-input-data/sample-folder
+```
+I have used the same path for my model and source folder in the google colab file.
+If you wish to have different paths for the model and source, you can do so by using the below cmd line.
+```shell
 
 python render_nv.py --model_path <path to point-cloud.ply (pre-trained model)> --source_path <path to images.txt and cameras.txt>
 ```
@@ -39,3 +45,6 @@ Each line corresponds to one camera model and includes the following information
    - For PINHOLE: focal_length_x, focal_length_y, principal_point_x,   
                    principal_point_y
    - For SIMPLE_PINHOLE: focal_length, principal_point_x, principal_point_y
+## References
+
+If you want to train a new model, follow the instructions provided in the [original Gaussian Splatting repository](https://github.com/graphdeco-inria/gaussian-splatting/) . It includes detailed steps and necessary scripts for training on your dataset.
