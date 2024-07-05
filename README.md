@@ -18,9 +18,12 @@ Photogrammetry on Synthetic Views: Generate synthetic views for photogrammetry, 
 Simulated SLAM: Conduct simulated SLAM (Simultaneous Localization and Mapping) for robotic or autonomous vehicle simulations, providing diverse and customizable environments for testing.
 
 ## Google Colab Notebook for rendering novel views
-To get started quickly, follow [here](https://colab.research.google.com/drive/11jayCPkY7Nr9OV9bxzzN3SHjMzb2poS6?usp=sharing/) for step-by-step instructions on rendering novel views using a pretrained model.
+To get started quickly, follow [here](https://colab.research.google.com/drive/11jayCPkY7Nr9OV9bxzzN3SHjMzb2poS6?usp=sharing/) for step-by-step instructions on rendering novel views using a pre-trained model.
 
-## Cloning the Repository
+## Cloning the Repository and setting up the environment
+I've used a fork from https://github.com/jonstephens85/gaussian-splatting-Windows.git to clone the Gaussian Splatting repo in Windows 11. It has some issues, and by addressing them, I arrived at the following software versions.
+-CUDA 11.7
+-Visual Studio 2019
 
 To clone this repository, use the following command:
 
@@ -48,7 +51,7 @@ To render novel views, run the render_nv.py script:
 
 python render_nv.py --model_path /content/drive/MyDrive/Gaussian-Splatting-render/gaussian-splatting-novel-view-render/render-input-data/sample-folder/ --source_path /content/drive/MyDrive/Gaussian-Splatting-render/gaussian-splatting-novel-view-render/render-input-data/sample-folder
 ```
-I have used the same path for my model and source folder in the google colab file.
+I have used the same path for my model and source folder in the Google Colab file.
 If you wish to have different paths for the model and source, you can do so by using the below cmd line.
 ```shell
 
@@ -72,4 +75,4 @@ Each line corresponds to one camera model and includes the following information
    - **For SIMPLE_PINHOLE**: focal_length, principal_point_x, principal_point_y
 ## References
 
-If you want to train a new model, follow the instructions provided in the [original Gaussian Splatting repository](https://github.com/graphdeco-inria/gaussian-splatting/) . It includes detailed steps and necessary scripts for training on your dataset.
+If you want to train a new model, follow the instructions provided in the [original Gaussian Splatting repository](https://github.com/graphdeco-inria/gaussian-splatting/). It includes detailed steps and necessary scripts for training on your dataset.
