@@ -2,7 +2,23 @@
 
 By Pranav Chougule, Arizona State University
 ## Overview
-Gaussian Splatting is a technique for rendering novel views of a scene using a point cloud representation. This repository includes scripts and sample data to demonstrate how to render images from different viewpoints using a trained Gaussian splatting model.
+Gaussian splatting is a technique in computer graphics that represents and renders 3D scenes using smooth Gaussian functions instead of discrete points or polygons. It provides smooth transitions and anti-aliased edges by blending the contributions of these Gaussian functions during rendering.
+
+## Overview
+This enhanced repository introduces a crucial new capability: the ability to generate novel synthetic views from user-defined camera poses. Unlike the original project, which was limited to rendering views from predetermined camera poses generated via COLMAP, this version allows you to specify arbitrary camera positions and orientations. This significantly expands the versatility and application of the Gaussian splatting technique.
+
+## Key Features
+- Novel View Synthesis: Define your own camera poses to generate new, synthetic views of the 3D scene, offering more creative control and flexibility.
+- Original Functionality: Retains all features from the original repository, including radiance field rendering from ground truth images.
+- Seamless Integration: The new capabilities are seamlessly integrated into the existing workflow, making it easy to leverage both the original and enhanced features.
+
+## Applications
+This powerful capability facilitates various advanced applications, including:
+
+Extended Reality (XR): Create immersive XR experiences with dynamic viewpoints, enhancing user engagement and interactivity.
+Photogrammetry on Synthetic Views: Generate synthetic views for photogrammetry, enabling the creation of dense texture-mapped 3D models from novel perspectives.
+Simulated SLAM: Conduct simulated SLAM (Simultaneous Localization and Mapping) for robotic or autonomous vehicle simulations, providing diverse and customizable environments for testing.
+
 ## Google Colab Notebook
 To get started quickly, follow [here](https://colab.research.google.com/drive/11jayCPkY7Nr9OV9bxzzN3SHjMzb2poS6?usp=sharing/) for step-by-step instructions on rendering novel views using a pretrained model.
 
