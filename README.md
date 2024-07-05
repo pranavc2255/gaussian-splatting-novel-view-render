@@ -52,7 +52,7 @@ For this, you will need three files:
 
 ```shell
 
-python convert_images_txt.py --input <path_to_colmap_model/sparse/0/images.txt> --output <path_to_your_sample_folder/images.txt>
+python convert_images_txt.py --input <path_to_colmap/images.txt> --output <path_to_your_sample_folder/images.txt>
 ```
 
 4. cameras.txt - Colmap generated file which has details about the camera model
