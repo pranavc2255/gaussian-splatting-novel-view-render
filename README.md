@@ -22,8 +22,8 @@ To get started quickly, follow [here](https://colab.research.google.com/drive/11
 
 ## Cloning the Repository and setting up the environment
 I've used a fork from https://github.com/jonstephens85/gaussian-splatting-Windows.git to clone the Gaussian Splatting repo in Windows 11. It has some issues, and by addressing them, I arrived at the following software versions.
--CUDA 11.7
--Visual Studio 2019
+- CUDA 11.7
+- Visual Studio 2019
 
 To clone this repository, use the following command:
 
