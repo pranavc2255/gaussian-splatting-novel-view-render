@@ -1,5 +1,5 @@
 # Novel camera view rendering of trained Gaussian Splatting model to PNG images
-By Pranav Chougule, Arizona State University
+By Pranav Chougule, Arizona State University.
 
 Welcome to the enhanced version of the 3D Gaussian Splatting for Real-Time Radiance Field Rendering project! This repository extends the original project’s capabilities, providing greater flexibility and functionality for rendering 3D scenes.
 
@@ -21,15 +21,17 @@ Simulated SLAM: Conduct simulated SLAM (Simultaneous Localization and Mapping) f
 To get started quickly, follow [here](https://colab.research.google.com/drive/11jayCPkY7Nr9OV9bxzzN3SHjMzb2poS6?usp=sharing/) for step-by-step instructions on rendering novel views using a pre-trained model.
 
 ## Cloning the Repository and setting up the environment
-I've used a fork from https://github.com/jonstephens85/gaussian-splatting-Windows.git to clone the Gaussian Splatting repo in Windows 11. It has some issues, and by addressing them, I arrived at the following software versions.
-- CUDA 11.7
-- Visual Studio 2019
+I used a fork from https://github.com/jonstephens85/gaussian-splatting-Windows.git to clone the Gaussian Splatting repo in Windows 11. It has some issues, and by addressing them, I arrived at the following software versions. Although you can download Git, Conda, Colmap, FFMPEG, and ImageMagik from the above repo's links.
+- CUDA 11.7 (Recommended CUDA 11.8 has some issues with this repo)
+- Visual Studio 2019 (April-June 2024 update of Visual Code 2022 is not working)
 
 To clone this repository, use the following command:
 
 ```bash
 git clone https://github.com/pranavc2255/gaussian-splatting-novel-view-render --recursive
 ```
+My conda environment can be installed by the following command which I used for COLMAP and Rendering (I used Colab for training the Gaussian Splatting Model Since I only had 4GB VRAM GTX 3050): 
+
 ```bash
 conda env create -f environment_nv.yml
 ```
