@@ -18,7 +18,7 @@ Extended Reality (XR): Create immersive XR experiences with dynamic viewpoints, 
 Photogrammetry on Synthetic Views: Generate synthetic views for photogrammetry, enabling the creation of dense texture-mapped 3D models from novel perspectives.
 Simulated SLAM: Conduct simulated SLAM (Simultaneous Localization and Mapping) for robotic or autonomous vehicle simulations, providing diverse and customizable environments for testing.
 
-## Google Colab Notebook
+## Google Colab Notebook for rendering novel views
 To get started quickly, follow [here](https://colab.research.google.com/drive/11jayCPkY7Nr9OV9bxzzN3SHjMzb2poS6?usp=sharing/) for step-by-step instructions on rendering novel views using a pretrained model.
 
 ## Directory Structure for sample data
