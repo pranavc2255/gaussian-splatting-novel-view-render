@@ -13,13 +13,23 @@ This enhanced repository introduces a crucial new capability: the ability to gen
 
 ## Applications
 This powerful capability facilitates various advanced applications, including:
-
 Extended Reality (XR): Create immersive XR experiences with dynamic viewpoints, enhancing user engagement and interactivity.
 Photogrammetry on Synthetic Views: Generate synthetic views for photogrammetry, enabling the creation of dense texture-mapped 3D models from novel perspectives.
 Simulated SLAM: Conduct simulated SLAM (Simultaneous Localization and Mapping) for robotic or autonomous vehicle simulations, providing diverse and customizable environments for testing.
 
 ## Google Colab Notebook for rendering novel views
 To get started quickly, follow [here](https://colab.research.google.com/drive/11jayCPkY7Nr9OV9bxzzN3SHjMzb2poS6?usp=sharing/) for step-by-step instructions on rendering novel views using a pretrained model.
+
+## Cloning the Repository
+
+To clone this repository, use the following command:
+
+```bash
+git clone https://github.com/pranavc2255/gaussian-splatting-novel-view-render --recursive
+```
+```bash
+conda env create -f environment_nv.yml
+```
 
 ## Directory Structure for sample data
 Ensure your directory structure is as follows:
