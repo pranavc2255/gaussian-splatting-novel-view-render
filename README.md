@@ -1,8 +1,7 @@
 # Novel camera view rendering of trained Gaussian Splatting model to PNG images
-
 By Pranav Chougule, Arizona State University
-## Overview
-Gaussian splatting is a technique in computer graphics that represents and renders 3D scenes using smooth Gaussian functions instead of discrete points or polygons. It provides smooth transitions and anti-aliased edges by blending the contributions of these Gaussian functions during rendering.
+
+Welcome to the enhanced version of the 3D Gaussian Splatting for Real-Time Radiance Field Rendering project! This repository extends the original project’s capabilities, providing greater flexibility and functionality for rendering 3D scenes.
 
 ## Overview
 This enhanced repository introduces a crucial new capability: the ability to generate novel synthetic views from user-defined camera poses. Unlike the original project, which was limited to rendering views from predetermined camera poses generated via COLMAP, this version allows you to specify arbitrary camera positions and orientations. This significantly expands the versatility and application of the Gaussian splatting technique.
