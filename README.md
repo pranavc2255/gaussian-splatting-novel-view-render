@@ -7,9 +7,9 @@ Welcome to the enhanced version of the 3D Gaussian Splatting for Real-Time Radia
 This enhanced repository introduces a crucial new capability: the ability to generate novel synthetic views from user-defined camera poses. Unlike the original project, which was limited to rendering views from predetermined camera poses generated via COLMAP, this version allows you to specify arbitrary camera positions and orientations. This significantly expands the versatility and application of the Gaussian splatting technique.
 
 ## Key Features
-- Novel View Synthesis: Define your own camera poses to generate new, synthetic views of the 3D scene, offering more creative control and flexibility.
+- Novel View Synthesis: Define your novel camera poses to generate new, synthetic views of the 3D scene, offering more creative control and flexibility.
 - Original Functionality: Retains all features from the original repository, including radiance field rendering from ground truth images.
-- Seamless Integration: The new capabilities are seamlessly integrated into the existing workflow, making it easy to leverage both the original and enhanced features.
+- Seamless Integration: The new capabilities are seamlessly integrated into the existing workflow, making leveraging both the original and enhanced features easy.
 
 ## Applications
 This powerful capability facilitates various advanced applications, including:
@@ -35,6 +35,27 @@ My conda environment can be installed by the following command which I used for 
 ```bash
 conda env create -f environment_nv.yml
 ```
+
+You can train the Gaussing Model using instructions from: https://github.com/jonstephens85/gaussian-splatting-Windows.git
+
+Below is the implementation of my code for rendering novel views of the trained Gaussian Splatting .ply model.
+
+## Novel camera view rendering Implementation:
+
+For this, you will need three files:
+1. point-cloud.ply - trained Gsplat model which can be found at your_output_model_folder/point-cloud/iteration_3000
+2. images.txt - You need to convert the original images.txt file that you got from Colmap to new images.txt using convert_images_txt.py (The original images.txt file has 2D point information of ground truth which   is not related to novel camera poses). Original images.txt has two lines per camera pose and we need only 1st line per camera pose which is explained below.
+  
+   Original images.txt from Colmap has the following format: Line 1#   IMAGE_ID, QW, QX, QY, QZ, TX, TY, TZ, CAMERA_ID, NAME Line2#   POINTS2D[] as (X, Y, POINT3D_ID).
+   
+   Required images.txt in the following format: Line1# # POSE_ID, QW, QX, QY, QZ, TX, TY, TZ, CAMERA_ID
+
+```shell
+
+python convert_images_txt.py --input <path_to_colmap_model/sparse/0/images.txt> --output <path_to_your_sample_folder/images.txt>
+```
+
+4. cameras.txt - Colmap generated file which has details about the camera model
 
 ## Directory Structure for sample data
 Ensure your directory structure is as follows:
