@@ -42,7 +42,11 @@ Below is the implementation of my code for rendering novel views of the trained 
 
 ## Novel camera view rendering Implementation:
 
-For this, you will need three files:
+If you have created camera poses in Blender, you will have to convert those poses to Colmap poses since both have different coordinate systems.
+You can use this library https://github.com/Fraunhofer-IIS/camorph/tree/main to do that. Remember, you need to export a .fbx file from Blender for this.
+After this, you will get a .txt file which you can convert to images.txt using convert_images_txt.py which is available on  this Github. I've explained how to convert it in 2nd point below.
+
+For setting up the directory, you will need three files:
 1. point-cloud.ply - trained Gsplat model which can be found at your_output_model_folder/point-cloud/iteration_3000
 2. images.txt - You need to convert the original images.txt file that you got from Colmap to new images.txt using convert_images_txt.py (The original images.txt file has 2D point information of ground truth which   is not related to novel camera poses). Original images.txt has two lines per camera pose and we need only 1st line per camera pose which is explained below.
   
@@ -51,7 +55,6 @@ For this, you will need three files:
    Required images.txt in the following format: Line1# # POSE_ID, QW, QX, QY, QZ, TX, TY, TZ, CAMERA_ID
 
 ```shell
-
 python convert_images_txt.py --input <path_to_colmap/images.txt> --output <path_to_your_sample_folder/images.txt>
 ```
 
@@ -71,13 +74,11 @@ directory ```render-input-data\sample-folder```:
 To render novel views, run the render_nv.py script:
  
 ```shell
-
 python render_nv.py --model_path /content/drive/MyDrive/Gaussian-Splatting-render/gaussian-splatting-novel-view-render/render-input-data/sample-folder/ --source_path /content/drive/MyDrive/Gaussian-Splatting-render/gaussian-splatting-novel-view-render/render-input-data/sample-folder
 ```
 I have used the same path for my model and source folder in the Google Colab file.
 If you wish to have different paths for the model and source, you can do so by using the below cmd line.
 ```shell
-
 python render_nv.py --model_path <path to point-cloud.ply (pre-trained model)> --source_path <path to images.txt and cameras.txt>
 ```
 ## Instructions for Creating and Formatting images.txt and cameras.txt
