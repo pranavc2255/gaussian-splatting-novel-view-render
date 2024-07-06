@@ -1,4 +1,4 @@
-# Novel camera view rendering of trained Gaussian Splatting model to PNG images
+# Novel camera view rendering of trained Gaussian Splatting model to PNG images (Still in Progress)
 By Pranav Chougule, Arizona State University.
 
 Welcome to the enhanced version of the 3D Gaussian Splatting for Real-Time Radiance Field Rendering project! This repository extends the original project’s capabilities, providing greater flexibility and functionality for rendering 3D scenes.
