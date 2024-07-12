@@ -47,7 +47,7 @@ You can use this library https://github.com/Fraunhofer-IIS/camorph/tree/main to 
 After this, you will get a .txt file which you can convert to images.txt using convert_images_txt.py which is available on  this Github. I've explained how to convert it in 2nd point below.
 
 For setting up the directory, you will need three files:
-1. point-cloud.ply - trained Gsplat model which can be found at your_output_model_folder/point-cloud/iteration_3000
+1. point-cloud.ply - trained Gsplat model which can be found at your_output_model_folder/point-cloud/iteration_30000
 2. images.txt - You need to convert the original images.txt file that you got from Colmap to new images.txt using convert_images_txt.py (The original images.txt file has 2D point information of ground truth which   is not related to novel camera poses). Original images.txt has two lines per camera pose and we need only 1st line per camera pose which is explained below.
   
    Original images.txt from Colmap has the following format: Line 1#   IMAGE_ID, QW, QX, QY, QZ, TX, TY, TZ, CAMERA_ID, NAME Line2#   POINTS2D[] as (X, Y, POINT3D_ID).
@@ -58,7 +58,7 @@ For setting up the directory, you will need three files:
 python convert_images_txt.py --input <path_to_colmap/images.txt> --output <path_to_your_sample_folder/images.txt>
 ```
 
-4. cameras.txt - Colmap generated file which has details about the camera model
+3. cameras.txt - Colmap generated file which has details about the camera model
 
 ## Directory Structure for sample data
 Ensure your directory structure is as follows:
